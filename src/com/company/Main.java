@@ -12,7 +12,7 @@ public class Main {
 
 // Salary Details
 
-        Employee_Salary salary1 = new Employee_Salary("E1","10000","Daily ");
+        Employee_Salary salary1 = new Employee_Salary("E1","10000","Daily");
         Employee_Salary salary2 = new Employee_Salary("E2","15000","Monthly");
         Employee_Salary salary3 = new Employee_Salary("E3","20000","Monthly");
         Employee_Salary salary4 = new Employee_Salary("E4","30000","Monthly");
@@ -49,13 +49,13 @@ public class Main {
 
         EmployeeAddress address1 = new EmployeeAddress(attendance1, "Vaishnav Clousure", " ", "8333060236", "Hyderabad", "India");
         EmployeeAddress address2 = new EmployeeAddress(attendance2, "Appartment ", " ", "1230456078", "Chennai", "India");
-        EmployeeAddress address3 = new EmployeeAddress(attendance3, "Hostel", " ", "8333060236", "Hyderabad", "India");
-        EmployeeAddress address4 = new EmployeeAddress(attendance4, "Paying Guest", " ", "8333060236", "California", "Usa");
-        EmployeeAddress address5 = new EmployeeAddress(attendance5, "From Home ", " ", "8333060236", "Delhi", "India");
-        EmployeeAddress address6 = new EmployeeAddress(attendance6, "Room", " ", "8333060236", "Hyderabad", "India");
-        EmployeeAddress address7 = new EmployeeAddress(attendance7, "Non Local", " ", "8333060236", "Delhi", "India");
-        EmployeeAddress address8 = new EmployeeAddress(attendance8, "Maharastra", " ", "8333060236", "Washington Dc ", "USA");
-        EmployeeAddress address9 = new EmployeeAddress(attendance9, "Andrapradesh", " ", "8333060236", "Hyderabad", "India");
+        EmployeeAddress address3 = new EmployeeAddress(attendance3, "Hostel", " ", "9876543210", "Hyderabad", "India");
+        EmployeeAddress address4 = new EmployeeAddress(attendance4, "Paying Guest", " ", "1237896540", "California", "Usa");
+        EmployeeAddress address5 = new EmployeeAddress(attendance5, "From Home ", " ", "15975346820", "Delhi", "India");
+        EmployeeAddress address6 = new EmployeeAddress(attendance6, "Room", " ", "7891564320", "Hyderabad", "India");
+        EmployeeAddress address7 = new EmployeeAddress(attendance7, "Non Local", " ", "35709512684", "Delhi", "India");
+        EmployeeAddress address8 = new EmployeeAddress(attendance8, "Maharastra", " ", "3129876453", "Washington Dc ", "USA");
+        EmployeeAddress address9 = new EmployeeAddress(attendance9, "Andrapradesh", " ", "3126459780", "Hyderabad", "India");
 //
 
 
@@ -85,7 +85,7 @@ public class Main {
 
 
         System.out.println("");
-        System.out.println("Task 1");
+        System.out.println("*** Task 1 ***");
         System.out.println("List of Employees based in INDIA ");
         System.out.println("");
         Employees.stream().filter(x->
@@ -93,7 +93,7 @@ public class Main {
 
 
         System.out.println("");
-        System.out.println("Task 2");
+        System.out.println("*** Task 2 ***");
         System.out.println("List of Employees who are in Chennai or Hyderabad");
         System.out.println("");
         Employees.stream().filter(x->
@@ -102,7 +102,7 @@ public class Main {
 
 
         System.out.println("");
-        System.out.println("Task 3");
+        System.out.println("*** Task 3 ***");
         System.out.println("List of Employees who are in Chennai and India");
         System.out.println("");
 
@@ -113,7 +113,7 @@ public class Main {
 
 
         System.out.println("");
-        System.out.println("Task 4");
+        System.out.println("*** Task 4 ***");
         System.out.println("List of employee_id, name, email, Salary, payable details");
         System.out.println("");
 
@@ -122,8 +122,20 @@ public class Main {
                 "; Salary"+y.getEmployeId().getE_Id().getES_ID().getSalary()+"; Payable Details : "+
                 y.getEmployeId().getE_Id().getES_ID().getPayable()));
 
+
+
         System.out.println("");
-        System.out.println("Task 5");
+        System.out.println("*** Task 5 ***");
+        System.out.println("List of employee_id, name, email, Salary, payable details whose salary is paid daily");
+        System.out.println("");
+        Employees.stream().filter(x->x.getEmployeId().getE_Id().getES_ID().getPayable().equals("Daily")).forEach(y->System.out.println("Emploiee Id : "+y.getEmployeId().getE_Id().getES_ID().getEmployee_Id()
+        +"; Name : "+y.getEmployeeName()+"; Email : "+y.getEmployeeEmail()+"; Salary : "+y.getEmployeId().getE_Id().getES_ID().getSalary()+
+                "; payable details whose salary is paid daily : "+y.getEmployeId().getE_Id().getES_ID().getPayable()));
+
+
+
+        System.out.println("");
+        System.out.println("*** Task 6 ***");
         System.out.println("List of employee_id, name, email, Salary, payable details whose salary is paid daily");
         System.out.println("");
         Employees.stream().forEach(y ->System.out.println("EmployeeID : "+y.getEmployeId().getE_Id().getES_ID().getEmployee_Id()+
