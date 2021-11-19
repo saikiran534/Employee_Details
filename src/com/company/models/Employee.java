@@ -1,21 +1,27 @@
 package com.company.models;
 
 public class Employee {
-    private EmployeeAddress EmployeId;
+    private String EmployeId;
     private String EmployeeName;
     private String EmployeeEmail;
+    private EmployeeAddress address;
+    private EmployeeAttendance attendance;
+    private EmployeeSalary salary;
 
-    public Employee(EmployeeAddress employeId, String employeeName, String employeeEmail) {
+    public Employee(String employeId, String employeeName, String employeeEmail, EmployeeAddress address, EmployeeAttendance attendance, EmployeeSalary salary) {
         EmployeId = employeId;
         EmployeeName = employeeName;
         EmployeeEmail = employeeEmail;
+        this.address = address;
+        this.attendance = attendance;
+        this.salary = salary;
     }
 
-    public EmployeeAddress getEmployeId() {
+    public String getEmployeId() {
         return EmployeId;
     }
 
-    public void setEmployeId(EmployeeAddress employeId) {
+    public void setEmployeId(String employeId) {
         EmployeId = employeId;
     }
 
@@ -33,5 +39,29 @@ public class Employee {
 
     public void setEmployeeEmail(String employeeEmail) {
         EmployeeEmail = employeeEmail;
+    }
+
+    public EmployeeAddress getAddress() {
+        return address;
+    }
+
+    public void setAddress(EmployeeAddress address) {
+        this.address = address;
+    }
+
+    public EmployeeAttendance getAttendance() {
+        return attendance;
+    }
+
+    public void setAttendance(EmployeeAttendance attendance) {
+        this.attendance = attendance;
+    }
+
+    public EmployeeSalary getSalary() {
+        return salary;
+    }
+
+    public void setSalary(EmployeeSalary salary) {
+        this.salary = salary;
     }
 }

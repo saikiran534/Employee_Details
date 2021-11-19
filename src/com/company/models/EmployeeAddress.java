@@ -1,28 +1,18 @@
 package com.company.models;
 
 public class EmployeeAddress {
-    private Employee_Attendance EA_Id;
     private String AddressLine1;
     private String AddressLine2;
     private String PhoneNo;
     private String City;
     private String Country;
 
-    public EmployeeAddress(Employee_Attendance e_Id, String addressLine1, String addressLine2, String phoneNo, String city, String country) {
-        EA_Id = e_Id;
+    public EmployeeAddress(String addressLine1, String addressLine2, String phoneNo, String city, String country) {
         AddressLine1 = addressLine1;
         AddressLine2 = addressLine2;
         PhoneNo = phoneNo;
         City = city;
         Country = country;
-    }
-
-    public Employee_Attendance getE_Id() {
-        return EA_Id;
-    }
-
-    public void setE_Id(Employee_Attendance e_Id) {
-        EA_Id = e_Id;
     }
 
     public String getAddressLine1() {

@@ -1,28 +1,32 @@
 package com.company.models;
 
 public class Holidays {
+    private String Date;
+    private Boolean Leave;
 
-    private int workingDays;
-    private int non_workingDays;
-
-    public Holidays(int workingDays, int non_workingDays) {
-        this.workingDays = workingDays;
-        this.non_workingDays = non_workingDays;
+    public Holidays(String date, Boolean leave) {
+        Date = date;
+        Leave = leave;
     }
 
-    public int getWorkingDays() {
-        return workingDays;
+    public String getDate() {
+        return Date;
     }
 
-    public void setWorkingDays(int workingDays) {
-        this.workingDays = workingDays;
+    public void setDate(String date) {
+        Date = date;
     }
 
-    public int getNon_workingDays() {
-        return non_workingDays;
+    public Boolean getLeave() {
+        return Leave;
     }
 
-    public void setNon_workingDays(int non_workingDays) {
-        this.non_workingDays = non_workingDays;
+    public void setLeave(Boolean leave) {
+        Leave = leave;
+    }
+
+    @Override
+    public String toString() {
+        return Date  ;
     }
 }
