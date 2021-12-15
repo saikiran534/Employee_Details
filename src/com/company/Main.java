@@ -1,4 +1,9 @@
 package com.company;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import com.company.models.*;
 
@@ -56,6 +61,24 @@ public class Main {
         Holidays date29 = new Holidays( "29-1-2021", true);
         Holidays date30 = new Holidays( "30-1-2021", true);
         Holidays date31 = new Holidays( "31-1-2021", true);
+
+
+    //Holiday Details Date format
+        DateTimeFormatter formatter_1 = DateTimeFormatter.ofPattern("d/MM/yyyy");
+        String str_date_1 = "24/09/2019";
+        String str_date_2 = "27/09/2019";
+        LocalDate local_date_1 = LocalDate.parse(str_date_1, formatter_1);
+        LocalDate local_date_2 = LocalDate.parse(str_date_2,formatter_1);
+//
+//        long daysBetween = ChronoUnit.DAYS.between(local_date_1,local_date_2);
+//System.out.println("no of day = " + daysBetween);
+
+//        LocalDate d1 = LocalDate.of(2019,12,10);
+//        LocalDate d2 = LocalDate.of(2019,12,20);
+//        Duration duration = Duration.between(d1,d2);
+        Period period = Period.between(local_date_1,local_date_2);
+        System.out.println(period.getDays() );
+
 
 
         List<Holidays> h1 = Arrays.asList(date2,date5,date17);
